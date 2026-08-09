@@ -1,0 +1,6 @@
+# artifacts
+bin
+obj
+
+# environment
+.idea

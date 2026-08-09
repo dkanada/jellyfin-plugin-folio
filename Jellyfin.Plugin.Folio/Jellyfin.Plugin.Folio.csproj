@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <RootNamespace>Jellyfin.Plugin.Folio</RootNamespace>
+        <OutputType>Library</OutputType>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Jellyfin.Controller" Version="12.0.0-rc4" />
+        <PackageReference Include="Jellyfin.Model" Version="12.0.0-rc4" />
+    </ItemGroup>
+
+</Project>
