@@ -1,0 +1,21 @@
+name: main
+on: push
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Clone
+      run: git clone --depth 1 https://github.com/${GITHUB_REPOSITORY} .
+    - name: Build
+      run: dotnet build --configuration release
+    - name: Prepare
+      run: mv Jellyfin.Plugin.Folio/bin/*/*/*.dll .
+    - name: Package
+      run: zip jellyfin-plugin-folio-${GITHUB_REF_NAME}.zip *.dll
+    - name: Publish
+      if: github.ref_type == 'tag'
+      run: gh release create ${GITHUB_REF_NAME} *.zip
