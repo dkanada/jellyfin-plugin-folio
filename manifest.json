@@ -1,0 +1,18 @@
+[
+  {
+    "guid": "f982556e-29c5-4fc0-9f68-83d00257041a",
+    "name": "Folio",
+    "overview": "Book Series as Collections in Jellyfin",
+    "owner": "dkanada",
+    "category": "Books",
+    "versions": [
+      {
+        "version": "1.0.0.0",
+        "checksum": "8b6f208013dc2f631bd1bb2ec0f10fc3",
+        "targetAbi": "12.0.0.0",
+        "sourceUrl": "https://github.com/dkanada/jellyfin-plugin-folio/releases/download/v1.0.0/jellyfin-plugin-folio-v1.0.0.zip",
+        "timestamp": "2026-08-17T06:33:56Z"
+      }
+    ]
+  }
+]
