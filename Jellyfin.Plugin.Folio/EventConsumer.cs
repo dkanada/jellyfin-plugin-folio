@@ -19,6 +19,8 @@ public class EventConsumer : IEventConsumer<PluginInstalledEventArgs>
     /// <summary>
     /// Initializes a new instance of the <see cref="EventConsumer"/> class.
     /// </summary>
+    /// <param name="serverConfigurationManager">The server configuration manager.</param>
+    /// <param name="logger">The logger.</param>
     public EventConsumer(IServerConfigurationManager serverConfigurationManager, ILogger<EventConsumer> logger)
     {
         _serverConfigurationManager = serverConfigurationManager;

@@ -11,6 +11,12 @@ public sealed class CollectionTask : ILibraryPostScanTask
 {
     private readonly CollectionManager _collectionManager;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CollectionTask"/> class.
+    /// </summary>
+    /// <param name="libraryManager">The library manager.</param>
+    /// <param name="collectionManager">The collection manager.</param>
+    /// <param name="logger">The logger.</param>
     public CollectionTask(
         ILibraryManager libraryManager,
         ICollectionManager collectionManager,
@@ -19,6 +25,7 @@ public sealed class CollectionTask : ILibraryPostScanTask
         _collectionManager = new CollectionManager(libraryManager, collectionManager, logger);
     }
 
+    /// <inheritdoc />
     public async Task Run(IProgress<double> progress, CancellationToken cancellationToken)
     {
         progress.Report(0);

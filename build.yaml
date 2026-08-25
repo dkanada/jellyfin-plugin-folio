@@ -1,0 +1,16 @@
+name: "Folio"
+guid: "f982556e-29c5-4fc0-9f68-83d00257041a"
+# imageUrl: "https://repo.jellyfin.org/releases/plugin/images/jellyfin-plugin-folio.png"
+version: 1
+targetAbi: "10.12.0.0"
+framework: "net10.0"
+owner: "jellyfin"
+overview: "."
+description: >
+  Organizes book series into collections
+
+category: "Books"
+artifacts:
+  - "Jellyfin.Plugin.Folio.dll"
+changelog: |-
+  - Initial release

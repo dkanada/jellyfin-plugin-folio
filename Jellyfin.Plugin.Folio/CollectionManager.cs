@@ -21,6 +21,9 @@ public sealed class CollectionManager
     /// <summary>
     /// Initializes a new instance of the <see cref="CollectionManager"/> class.
     /// </summary>
+    /// <param name="libraryManager">The library manager.</param>
+    /// <param name="collectionManager">The collection manager.</param>
+    /// <param name="logger">The logger.</param>
     public CollectionManager(
         ILibraryManager libraryManager,
         ICollectionManager collectionManager,
@@ -31,6 +34,11 @@ public sealed class CollectionManager
         _logger = logger;
     }
 
+    /// <summary>
+    /// Update the library.
+    /// </summary>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
     public async Task UpdateLibrary(CancellationToken cancellationToken)
     {
         var eligibleBooks = _libraryManager.GetItemList(new InternalItemsQuery

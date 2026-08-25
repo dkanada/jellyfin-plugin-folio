@@ -18,7 +18,10 @@ public class Plugin : BasePlugin<BasePluginConfiguration>
     /// <summary>
     /// Initializes a new instance of the <see cref="Plugin"/> class.
     /// </summary>
-    public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer) : base(applicationPaths, xmlSerializer)
+    /// <param name="applicationPaths">The application paths.</param>
+    /// <param name="xmlSerializer">The xml serializer.</param>
+    public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
+        : base(applicationPaths, xmlSerializer)
     {
         Instance = this;
     }
